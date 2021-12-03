@@ -40,7 +40,4 @@ if status is-interactive
 
   alias tt terminal_title
   alias e subl
-
-
 end
-
