@@ -4,6 +4,16 @@ if status is-interactive
   # skip the fish greeting
   set fish_greeting
 
+  # Have `tree` colour directories yellowish
+  set -gx LS_COLORS 'di=33'
+
+  # Bat (a better cat) https://github.com/sharkdp/bat
+  set -gx BAT_THEME TwoDark
+
+  # Homebrew
+  eval (/opt/homebrew/bin/brew shellenv)
+  set -gx HOMEBREW_AUTO_UPDATE_SECS (echo '60 * 60 * 24 * 7' | bc)
+
   # things in terminal.app that we changed
   # option as meta key
 
@@ -41,4 +51,7 @@ if status is-interactive
 
   alias tt terminal_title
   alias e subl
+  alias ls exa
+  alias ll exa -la
+  alias cat bat
 end
