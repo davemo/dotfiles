@@ -1,0 +1,50 @@
+[user]
+        name = David Mosher
+        email = davidmosher@gmail.com
+[core]
+        autocrlf = input
+        safecrlf = false
+        editor = vim
+        excludesFile = /Users/davidmosher/.gitignore_global
+[github]
+        user = davemo
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        br = branch
+        hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+        lo = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        ln = log --name-status
+        type = cat-file -t
+        dump = cat-file -p
+        up  = "!git remote update -p; git merge --ff-only @{u}"
+        ds  = diff --staged
+
+[color]
+        ui = auto
+[fetch]
+        prune = true
+[push]
+        default = current
+[merge]
+        keepBackup = false
+[branch]
+        autosetuprebase = always
+        autosetupmerge = always
+[rerere]
+        enabled = true
+[diff]
+        renames = true
+[help]
+        autocorrect = 1
+[rebase]
+        autoStash = true
+[init]
+        defaultBranch = main
+
+[filter "lfs"]
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+        clean = git-lfs clean -- %f
