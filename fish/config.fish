@@ -8,6 +8,7 @@ if status is-interactive
   # option as meta key
 
   # nodenv things
+  export PATH="$HOME/bin:$PATH"
   export PATH="$HOME/.nodenv/bin:$PATH"
   export PATH="$HOME/.nodenv/shims:$PATH"
   export PATH="$HOME/.pyenv/bin:$PATH"
