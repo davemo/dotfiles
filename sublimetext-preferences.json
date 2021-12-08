@@ -30,7 +30,7 @@
     "node_modules",
     "dist"
   ],
-  "font_face": "Panic Sans",
+  "font_face": "FiraCode Nerd Font Mono",
   "font_size": 20,
   "highlight_line": true,
   "highlight_modified_tabs": true,
