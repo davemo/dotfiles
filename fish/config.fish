@@ -11,7 +11,7 @@ if status is-interactive
   set -gx BAT_THEME TwoDark
 
   # Homebrew
-  eval (/opt/homebrew/bin/brew shellenv)
+  eval (/usr/local/bin/brew shellenv)
   set -gx HOMEBREW_AUTO_UPDATE_SECS (echo '60 * 60 * 24 * 7' | bc)
 
   # things in terminal.app that we changed
@@ -55,9 +55,9 @@ if status is-interactive
   # aliases
   alias tt "terminal_title"
   alias e "subl"
-  alias ls "exa"
-  alias ll "exa -lah"
+  alias ls "exa --icons"
+  alias ll "exa -lah --icons"
   alias cat "bat"
   alias be "bundle exec"
-  alias tree "exa -lahg --tree -L2"
+  alias tree "exa --icons --tree -L2"
 end
