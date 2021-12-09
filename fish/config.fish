@@ -23,7 +23,12 @@ if status is-interactive
   export PATH="$HOME/.nodenv/shims:$PATH"
   export PATH="$HOME/.pyenv/bin:$PATH"
   export PATH="$HOME/.pyenv/shims:$PATH"
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  export PATH="$HOME/.rbenv/shims:$PATH"
+
   set -x NODENV_SHELL fish
+  set -x PYENV_SHELL fish
+  set -x RBENV_SHELL fish
 
   function nodenv
     set command $argv[1]
@@ -48,10 +53,11 @@ if status is-interactive
   end
 
   # aliases
-
-  alias tt terminal_title
-  alias e subl
-  alias ls exa
-  alias ll exa -la
-  alias cat bat
+  alias tt "terminal_title"
+  alias e "subl"
+  alias ls "exa"
+  alias ll "exa -lah"
+  alias cat "bat"
+  alias be "bundle exec"
+  alias tree "exa -lahg --tree -L2"
 end
