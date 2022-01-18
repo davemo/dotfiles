@@ -11,7 +11,7 @@ if status is-interactive
   set -gx BAT_THEME TwoDark
 
   # Homebrew
-  eval (/usr/local/bin/brew shellenv)
+  eval (/opt/homebrew/bin/brew shellenv)
   set -gx HOMEBREW_AUTO_UPDATE_SECS (echo '60 * 60 * 24 * 7' | bc)
 
   # things in terminal.app that we changed
@@ -57,7 +57,12 @@ if status is-interactive
   alias e "subl"
   alias ls "exa --icons"
   alias ll "exa -lah --icons"
+  alias dc "docker-compose"
   alias cat "bat"
   alias be "bundle exec"
+  alias gg "git grep"
   alias tree "exa --icons --tree -L2"
+  alias rmnm "find . -name 'node_modules' -exec rm -rf '{}' +"
+  alias rmpl "find . -name 'package-lock.json' -exec rm -f '{}' +"
+  alias gitflush "git branch --merged master | grep -v master | xargs git branch -d && git remote prune origin"
 end
